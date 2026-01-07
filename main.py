@@ -26,6 +26,12 @@ player = pygame.image.load("images/Character_walk_1.png").convert_alpha()
 player_rect = player.get_rect(topleft=(300, 350))
 player_speed = 5
 
+imgwidth = player.get_width() // 5
+imgheight = player.get_height() // 5
+new_size = (imgwidth, imgheight)
+
+player = pygame.transform.scale(player, new_size)
+
 game_loop = True
 
 while game_loop:
